@@ -16,6 +16,8 @@ html, body{
   margin: 0px;
   padding: 0px;
   font-family: coromorant, cursive;
+  background-color: lighten($main-color, 10);
+  color: $white;
 }
 
 /* Importing Bootstrap SCSS file. */

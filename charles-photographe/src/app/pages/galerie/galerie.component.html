@@ -1,9 +1,23 @@
-<div class="d-flex text-center align-content-center flex-column justify-content-center">
+<div class="bg d-flex text-center align-content-center flex-column justify-content-center">
   <ng-form class="form" [formGroup]="filtre">
-
+    <div class="card m-3">
+      <div class="card-header">Catégorie</div>
+      <div class="form-row card-body">
+        <div class="form-group col">
+          <select class="form-control" id="selecteur" name="selecteur" formControlName="selecteur"  (ngModelChange)="changePhotos($event)">
+            <option value="mariage" selected>Mariage</option>
+            <option value="grossesse">Grossesse</option>
+            <option value="bebe">Bébé</option>
+            <option value="famille">Famille</option>
+            <option value="bapteme">Baptême</option>
+            <option value="couple">Couple</option>
+          </select>
+        </div>
+      </div>
+    </div>
   </ng-form>
-  <ngb-carousel *ngIf="images" class="w-75">
-    <ng-template *ngFor="let image of images" ngbSlide>
+  <ngb-carousel *ngIf="imagesDisplay" class="">
+    <ng-template *ngFor="let image of imagesDisplay" ngbSlide>
       <div class="picsum-img-wrapper">
         <img [src]="image" width="100%" alt="Random first slide" />
       </div>

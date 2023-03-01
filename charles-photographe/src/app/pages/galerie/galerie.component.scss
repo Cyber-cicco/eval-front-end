@@ -1,0 +1,14 @@
+$main-color : #ef8639;
+$white : #e4d9c9;
+
+
+img{
+  width: 75%;
+}
+.bg{
+  background-color: lighten($main-color,10);
+}
+.card{
+  background-color: #3a3c48;
+  color: white;
+}

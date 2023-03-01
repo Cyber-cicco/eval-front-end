@@ -9,12 +9,33 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   templateUrl: './galerie.component.html',
 })
 export class GalerieComponent {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
   filtre:FormGroup;
+
+  imagesDisplay:string[] = ["assets/photos/mariage/1.png", "assets/photos/mariage/2.png"];
+
+  images = {
+    "mariage": ["1","2","3","4"],
+    "grossesse":["1","2","3","4"],
+    "bebe":["1","2","3","4"],
+    "famille":["1","2","3","4"],
+    "bapteme":["1","2","3","4"],
+    "couple":["1","2","3","4"]
+  };
+
 
   constructor(fb:FormBuilder) {
     this.filtre = fb.group({
       selecteur:["",[]]
-    })
+    });
+  }
+
+  get selecteur(){
+    return this.filtre.get("selecteur");
+  }
+
+  changePhotos(value:string) {
+    console.log(value);
+    // @ts-ignore
+    this.imagesDisplay =  this.images[value].map(val => "assets/photos/" + value + "/"+val+".png");
   }
 }
