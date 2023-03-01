@@ -7,6 +7,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { GalerieComponent } from './pages/galerie/galerie.component';
 import { TarifsComponent } from './pages/tarifs/tarifs.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     ContactComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     AppRoutingModule
   ],
