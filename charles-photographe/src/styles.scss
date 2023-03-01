@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: montserat;
+  src: url("./assets/fonts/static/Montserrat-Black.ttf");
+}
+@font-face {
+  font-family: coromorant;
+  src: url("./assets/fonts/CormorantGaramond-Regular.ttf");
+}
+
+$main-color : #ef8639;
+$secondary-color : #3a3c48;
+$white : #e4d9c9;
+
 html, body{
   margin: 0px;
   padding: 0px;
+  font-family: coromorant, cursive;
 }
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap';

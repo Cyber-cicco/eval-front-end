@@ -1,11 +1,5 @@
-body {
-  display: grid;
-  height: 100%;
-  width: 100%;
-  margin: 0px;
-  font-family: "Poppins", sans-serif;
-  background: rgb(0, 0, 15);
-}
+
+$secondary-color : #3a3c48;
 
 nav.navbar{
   padding-top:0;
@@ -37,9 +31,8 @@ div.logo img{
   align-items: center;
   justify-content: space-between;
   padding: 0px 0px 0px 0px;
-  background: rgb(0, 0, 15);
-  border-bottom: aliceblue 5px solid;
-  font-family: "Poppins", sans-serif;
+  background:  darken($secondary-color, 10);
+  font-family: montserat, sans-serif;
 }
 
 .nav-links a {
@@ -67,12 +60,6 @@ img{
   text-decoration: none;
 }
 
-img:hover{
-  max-width: 100%;
-  height: auto;
-  margin:10px;
-  text-decoration: none;
-}
 
 .menu {
   display: flex;
@@ -81,14 +68,13 @@ img:hover{
   font-size: 18px;
 }
 .menu li:hover {
-  background-color: rgb(20,20,40);
+  background:  darken($secondary-color, 1);
   border-radius: 10px;
   transition: 0.3s ease;
 }
 .menu li {
   padding: 10px;
-  margin: 10px;
-  margin-right: 40px;
+  margin: 10px 40px 10px 10px;
 }
 
 /* DROPDOWN MENU */

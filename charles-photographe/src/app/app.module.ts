@@ -8,6 +8,7 @@ import { GalerieComponent } from './pages/galerie/galerie.component';
 import { TarifsComponent } from './pages/tarifs/tarifs.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {SharedModule} from "./shared/shared.module";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {SharedModule} from "./shared/shared.module";
   imports: [
     SharedModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
