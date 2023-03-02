@@ -21,6 +21,7 @@ export class GalerieComponent {
     "bapteme":["1","2","3","4"],
     "couple":["1","2","3","4"]
   };
+  nrSelect = "mariage";
 
 
   constructor(fb:FormBuilder) {

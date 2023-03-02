@@ -1,1 +1,7 @@
-<p>tarifs works!</p>
+<div class="d-flex flex-column justify-content-center align-items-center bg-image">
+  <div *ngFor="let prestation of prestations" class="w-75 bg-2 mt-4 text-center border rounded p-3">
+    <div><h2>{{prestation.titre}}</h2></div>
+    <div>{{prestation.prix}} euros</div>
+    <div>{{prestation.description}}</div>
+  </div>
+</div>

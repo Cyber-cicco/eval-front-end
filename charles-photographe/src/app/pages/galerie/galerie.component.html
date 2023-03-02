@@ -4,8 +4,8 @@
       <div class="card-header">Catégorie</div>
       <div class="form-row card-body">
         <div class="form-group col">
-          <select class="form-control" id="selecteur" name="selecteur" formControlName="selecteur"  (ngModelChange)="changePhotos($event)">
-            <option value="mariage" selected>Mariage</option>
+          <select class="form-control" [(ngModel)]='nrSelect' id="selecteur" name="selecteur" formControlName="selecteur"  (ngModelChange)="changePhotos($event)">
+            <option  value='mariage' selected>Mariage</option>
             <option value="grossesse">Grossesse</option>
             <option value="bebe">Bébé</option>
             <option value="famille">Famille</option>
@@ -20,10 +20,6 @@
     <ng-template *ngFor="let image of imagesDisplay" ngbSlide>
       <div class="picsum-img-wrapper">
         <img [src]="image" width="100%" alt="Random first slide" />
-      </div>
-      <div class="carousel-caption">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       </div>
     </ng-template>
   </ngb-carousel>

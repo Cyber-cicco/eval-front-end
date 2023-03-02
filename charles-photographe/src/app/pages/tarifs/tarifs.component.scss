@@ -1,0 +1,24 @@
+$main-color : #ef8639;
+$secondary-color : #3a3c48;
+
+.bg{
+  opacity: 1;
+}
+.bg-2{
+  background-color: $secondary-color;
+  color: white;
+}
+
+.bg-image{
+  background-image: url("../../../assets/photos/mainPhoto.png");
+  -moz-background-size: cover;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100%;
+  position: absolute;
+  top: 79px;
+  left: 0px;
+  z-index: -1;
+  margin: 0;
+  background-repeat: repeat;
+}
