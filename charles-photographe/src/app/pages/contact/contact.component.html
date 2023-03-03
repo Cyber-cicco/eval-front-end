@@ -1,1 +1,35 @@
-<p>contact works!</p>
+<div class="bg d-flex justify-content-center">
+  <ng-form class="form m-1" [formGroup]="formContact" action="https://formspree.io/f/xeqwkraw" method="POST">
+    <div class="card m-3">
+      <div class="card-header h2">Contact</div>
+      <div class="form-row card-body">
+        <div class="form-group col">
+          <label for="email">Votre nom:</label>
+          <input type="text" name="name" id="name" formControlName="name" class="form-control">
+          <small *ngIf="name?.invalid && submitted" class="text-warning">Votre mail n'est pas valide</small>
+        </div>
+        <div class="form-group col">
+          <label for="email">Votre mail:</label>
+          <input type="text" name="email" id="email" formControlName="email" class="form-control">
+          <small *ngIf="email?.invalid && submitted" class="text-warning">Votre mail n'est pas valide</small>
+        </div>
+        <div class="form-group col">
+          <label for="tel">Votre numéro de téléphone (facultatif):</label>
+          <input type="tel" name="tel" id="tel" formControlName="telephone" class="form-control">
+          <small *ngIf="tel?.invalid && submitted" class="text-warning">Votre numéro de téléphone n'est pas valide</small>
+        </div>
+        <div class="form-group col">
+          <label for="message">Votre message :</label>
+          <textarea name="message" id="message" class="form-control" formControlName="message" cols="40" rows="5" (ngModelChange)="changeLen($event)"></textarea>
+          <div class="align-content-end">{{textLen}}/2000</div>
+          <small *ngIf="message?.invalid && submitted" class="text-warning">Votre message doit faire entre 10 et 2000 caractères</small>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn button" (click)="submit()">Envoyer</button>
+    </div>
+    <div class="h3">{{messageSent}}</div>
+  </ng-form>
+</div>
+

@@ -52,7 +52,7 @@ div.logo img{
 }
 
 /* NAVBAR MENU */
-img{
+.logo1{
   max-height: 100%;
   height: 75px;
   max-width: 75px;
@@ -74,7 +74,7 @@ img{
 }
 .menu li {
   padding: 10px;
-  margin: 25px 40px 10px 10px;
+  margin: 25px 10px 10px 10px;
 }
 
 /* DROPDOWN MENU */
@@ -131,6 +131,7 @@ input[type=checkbox]{
     left: 0;
     text-align: center;
     padding: 40px 0;
+    z-index: 10000 !important;
   }
   .menu li:hover {
     background-color: rgb(20,20,40);
@@ -151,8 +152,7 @@ input[type=checkbox]{
 
   div.menu li{
     border-radius: 10px;
-    background-color: #000;
-    z-index: 10000;
+    background:  darken($secondary-color, 10);
   }
 }
 

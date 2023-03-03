@@ -1,0 +1,26 @@
+$main-color : #ef8639;
+$white : #e4d9c9;
+.card{
+  background-color: #3a3c48;
+
+}
+.bg{
+  background-color: lighten($main-color,10);
+}
+
+button{
+  background-color: $white;
+  color: black  ;
+}
+button:hover{
+  background-color: black;
+  color: $white  ;
+}
+
+.form{
+  @media screen and (max-width: 700px){
+    width: 100%;
+  }
+  width: 75%;
+  color: white;
+}
